@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://AuthenticatedUserAgent:iPmxmCseRlYecO9M@agencychat.2hujl0k.mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true });
 const Message = mongoose.model('Message', { name: String, message: String, deleteKey: String });
 
 app.use(bodyParser.urlencoded({ extended: false }));
